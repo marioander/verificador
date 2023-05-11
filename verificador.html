@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        html {
+            font: bold 1em Arial;
+        }
+
+        body {
+            background-color: rgb(232, 115, 102);
+        }
+
+        header, footer {
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        main {
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.612);
+            font-size: 20px;
+        }
+
+        a {
+            color: white;
+        }
+
+        #res {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #imagem {
+            display: none;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            text-align: center;
+            background-size: cover;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <fieldset>
+            <legend>Dados</legend>
+            <p>Ano de Nascimento: <input type="number" min="1900" max="2023" maxlength="4" required id="datan"></p>
+            
+            <p>Sexo: <input type="radio" value="M" id="mas" name="sexo" checked><label for="mas">Masculino</label> <input type="radio" value="F" id="fem" name="sexo"><label for="fem">Feminino</label></p>
+
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+            <div id="res" name="resultado">Preencha os dados acima para ver o resultado.</div>
+            <div id="imagem"></div>
+        </fieldset>
+    </main>
+    <footer>
+        <p>© <a href="https://github.com/marioander" rel="external" target="_blank">Mário Ander</a></p>
+    </footer>
+    <script src="script-verificador.js"></script>
+</body>
+</html>
